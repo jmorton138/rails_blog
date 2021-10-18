@@ -1,9 +1,11 @@
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-    <p>
+<div id="comment-form" class="container">
+
+  <%= form_with model: [ @article, @article.comments.build ] do |form| %>
+    <p class="comment">
       <%= form.label :commenter %><br>
       <%= form.text_field :commenter %>
     </p>
-    <p>
+    <p class="comment">
       <%= form.label :body %><br>
       <%= form.text_area :body %>
     </p>
@@ -11,4 +13,5 @@
       <%= form.submit %>
     </p>
   <% end %>
+</div>
   

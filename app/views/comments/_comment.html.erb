@@ -1,15 +1,20 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+<div class="container">
+  <p class="comment">
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
 
-<p>
-    <%= link_to 'Destroy Comment', [comment.article, comment],
-                method: :delete,
-                data: { confirm: 'Are you sure?' } %>
-</p>
+
+  <p class="comment">
+    <%= comment.body %>
+  </p>
+
+
+  <div class="footer-btns">
+      <button><%= link_to 'Destroy Comment', [comment.article, comment],
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %></button>
+  </div>
+
+</div>

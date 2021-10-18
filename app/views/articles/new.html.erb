@@ -1,3 +1,7 @@
-<h1>New Article</h1>
+<button class="home"><%= link_to "Home", articles_path(@article) %></button>
 
-<%= render "form", article: @article %>
+
+<h1>New Article</h1>
+<div class="container new-art">
+    <%= render "form", article: @article %>
+</div>
